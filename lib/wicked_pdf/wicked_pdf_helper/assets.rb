@@ -114,7 +114,7 @@ module WickedPdfHelper
     end
 
     def asset_exists?(source)
-      Rails.application.assets.find_asset(source).present?
+      Rails.application.assets.find_asset(source).present? rescue false
     end
   end
 end
